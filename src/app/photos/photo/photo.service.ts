@@ -1,21 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Photo } from './photo';
 
 const API = 'http://localhost:3000/'
 
 @Injectable({
   providedIn: 'root'
 })
-export class PhotosService {
-
-  
+export class PhotoService {
+   
   
   constructor(private http: HttpClient) { }
 
   listFromUser(userName: string){
     return this.http
-      .get<Object[]>(API+userName+'/photos');
+      .get<Photo[]>(API+userName+'/photos');
   }
-
-
 }

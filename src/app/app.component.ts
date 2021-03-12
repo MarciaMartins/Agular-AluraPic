@@ -1,5 +1,5 @@
-import { PhotosService } from './photos/photos.service';
-import { Component } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,14 +9,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Alura Angular Parte 01';
 
-  photos = [];
-
-  constructor(photoService: PhotosService){
-    photoService.listFromUser('flavio')
-      .subscribe(photos => {
-          console.log(photos);
-          this.photos = photos
-        });
-  }
+  
 
 }

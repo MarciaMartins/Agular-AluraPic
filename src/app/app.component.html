@@ -1,14 +1,7 @@
 <h1>{{title}}</h1>
 
 
-<p>
-  Componente Photo
-</p>
 
-<div *ngFor="let photo of photos">
-  <app-photo
-    [description] = "photo.description"
-    [url] = "photo.url"
-></app-photo>
-</div>
+
+<router-outlet></router-outlet>
 
